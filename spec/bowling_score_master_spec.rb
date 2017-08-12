@@ -12,8 +12,19 @@ RSpec.describe BowlingScoreMaster do
     expect(BowlingScoreMaster.new.score(flat_game)).to eq 90
   end
 
-  it 'should score ten spares with all nine on spare as one hundred ninety' do
-    all_spare_game = ('9/' * 10) + '9'
-    expect(BowlingScoreMaster.new.score(all_spare_game)).to eq 190
+  it 'should score ten spares with all fives on spare as one hundred fifty' do
+    all_spare_game = ('5/' * 10) + '5'
+    expect(BowlingScoreMaster.new.score(all_spare_game)).to eq 150
   end
+
+  it 'should score a perfect game correctly as three hundred' do
+    perfect_game = ('X' * 12)
+    expect(BowlingScoreMaster.new.score(perfect_game)).to eq 300
+  end
+
+  it 'should score "X7/9-X-88/-6XXX81" as one hundred sixty-seven as per example test cases' do
+    sample_game = 'X7/9-X-88/-6XXX81'
+    expect(BowlingScoreMaster.new.score(sample_game)).to eq 167
+  end
+
 end
