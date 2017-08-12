@@ -3,6 +3,20 @@
 ## Requirement
 Create a program which, given a valid sequence of rolls for one line of American Ten-Pin Bowling, produces the total score for the game. Fork this repository, build your program in the language of your choice, then submit a pull request with your code.
 
+## Program Usage (Added by Robert Phelps)
+Install Ruby on your machine (preferably Ruby 2.3.3 but any version after 2.0 should work fine) if
+Ruby has not already been installed.  Then from the command line simple run:
+```
+ruby bowling_score.rb <score_string>
+```
+...where `score_string` is int he format listed below, and the program should return a numeric score.
+
+If you have RVM or a similar Ruby package manager installed, then the correct ruby version and gemset
+should get installed automatically when entering this directory.
+
+To run the unit test suite: run `bundle install` to install RSpec, then simply run `rspec` at the
+command line to run the test suite.
+
 ## Tasks which are out of scope
 *   No need to check for valid rolls.
 *   No need to check for correct number of rolls and frames.
@@ -26,5 +40,3 @@ Use the test cases from the table below to validate the scoring logic of your pr
 | 9-9-9-9-9-9-9-9-9-9-  | 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9                                                                                           | 90          |
 | 5/5/5/5/5/5/5/5/5/5/5 | (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5) + (10+5)                                         | 150         |
 | X7/9-X-88/-6XXX81     | (10+7+3) + (7+3+9) + 9 + (10+0+8) + 8 + (8+2+0) + 6 + (10+10+10) + (10+10+8) + (10+8+1)                                         | 167         |
-
-
