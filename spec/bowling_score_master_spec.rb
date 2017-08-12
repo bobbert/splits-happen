@@ -22,6 +22,11 @@ RSpec.describe BowlingScoreMaster do
     expect(BowlingScoreMaster.new.score(perfect_game)).to eq 300
   end
 
+  it 'should score an almost-perfect game with nine in the tenth frame as two hundred seventy-nine' do
+    almost_perfect_game = ('X' * 9) + '9/X'
+    expect(BowlingScoreMaster.new.score(almost_perfect_game)).to eq 279
+  end
+
   it 'should score "X7/9-X-88/-6XXX81" as one hundred sixty-seven as per example test cases' do
     sample_game = 'X7/9-X-88/-6XXX81'
     expect(BowlingScoreMaster.new.score(sample_game)).to eq 167
