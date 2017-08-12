@@ -9,7 +9,8 @@ Ruby has not already been installed.  Then from the command line simple run:
 ```
 ruby bowling_score.rb <score_string>
 ```
-...where `score_string` is int he format listed below, and the program should return a numeric score.
+...where `score_string` is in the format listed below, as described in the
+"Validation Test Cases" section, and the program should return a numeric score.
 
 If you have RVM or a similar Ruby package manager installed, then the correct ruby version and gemset
 should get installed automatically when entering this directory.
