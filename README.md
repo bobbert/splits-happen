@@ -5,12 +5,17 @@ Create a program which, given a valid sequence of rolls for one line of American
 
 ## Program Usage (Added by Robert Phelps)
 Install Ruby on your machine (preferably Ruby 2.3.3 but any version after 2.0 should work fine) if
-Ruby has not already been installed.  Then from the command line simple run:
+Ruby has not already been installed.  Then from the command line simply run:
 ```
 ruby bowling_score.rb <score_string>
 ```
-...where `score_string` is in the format listed below, as described in the
-"Validation Test Cases" section, and the program should return a numeric score.
+...where `score_string` is a bowling scorecard string in the format as described in the
+"Validation Test Cases" section: each character in the scorecard string is a digit `1-9`,
+`-` (zero), `/` (spare), or `X` (strike).  See the *Scoring Logic* for a further
+explanation on scoring.
+
+The program prints a numeric score between 0 and 300 if a valid scorecard string
+is passed in.
 
 If you have RVM or a similar Ruby package manager installed, then the correct ruby version and gemset
 should get installed automatically when entering this directory.
